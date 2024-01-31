@@ -1,0 +1,1 @@
+﻿New-ADUser -Name "Lucy Fer" -DisplayName "FER Lucy" -GivenName "Lucy" -Surname "Fer" -SamAccountName "l.fer" -UserPrincipalName "lucy.fer@Shinra.corp" -EmailAddress "lucy.fer@Shinra.corp"-Path "OU=Gardiens_des_loups,DC=Shinra,DC=Corp"-AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force) -ChangePasswordAtLogon $true -Enabled $true 
