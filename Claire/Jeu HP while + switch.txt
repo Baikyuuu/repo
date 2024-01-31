@@ -1,0 +1,197 @@
+cls
+
+$continue = $true
+while ($continue)
+{
+
+Write-Host ¤ Jeu Harry Potter ¤
+Write-Host "Appuyez sur '1' pour découvrir ta maison à Poudlard"
+Write-Host "Appuyez sur '2' pour découvrir ta baguette"
+Write-Host "Appuyez sur '3' pour découvrir ton patronus"
+Write-Host "Appuyez sur '4' pour quitter."
+
+$choix = Read-Host "Choisissez"
+
+switch ($choix)
+{
+
+'1'
+{
+$continue = $true
+while ($continue)
+{
+    cls
+
+    Write-Host "Tu as choisi de découvrir ta maison à Poudlard `n"
+    Write-Host "Choississez le numéro qui représente vos qualités principales"
+    Write-Host "1" "Courage - Hardiesse - Force d'esprit" -foreground DarkRed
+    Write-Host "2" "Empathie - Loyauté - Patience" -ForegroundColor DarkYellow
+    Write-Host "3" "Ruse - Adresse - Détermination" -ForegroundColor DarkGreen
+    Write-Host "4" "Sagesse - Discernement - Erudition `n" -ForegroundColor DarkCyan
+    Write-host  "Tapez '0' revenir au menu principal `n"
+
+$number = Read-Host "Quel est votre numéro ?"
+
+if ($number -lt 5)
+
+{
+    if ($number -eq 1)
+
+    {
+    Write-Host "`n Bravo tu es un Gryffondor ! `n" -ForegroundColor DarkRed
+    }
+
+    if ($number -eq 2)
+    {
+    Write-Host "`n  Bravo tu es un Poufsouffle ! `n" -Foregroundcolor DarkYellow
+    }
+
+    if ($number -eq 3)
+    {
+    Write-Host "`n Bravo tu es un Serpentard ! `n" -foregroundcolor DarkGreen
+    }
+
+    if ($number -eq 4)
+    {
+    Write-Host "`n Bravo tu es un Serdaigle `n" -foregroundcolor DarkCyan
+    }
+
+    if ($number -eq 0)
+    {
+    break
+    }
+}
+
+else
+{
+Write-Host "`n Choix invalide `n" -ForegroundColor red
+}
+
+pause
+
+}
+}
+
+'2'
+{
+$continue = $true
+while ($continue)
+{
+    cls
+
+    Write-Host "Tu as choisi de découvrir ta baguette `n"
+    Write-Host "Choississez le numéro qui vous représente le plus"
+    Write-Host "1" "Conflictuel - Patient" -foreground DarkRed
+    Write-Host "2" "Créatif - fidèle" -ForegroundColor DarkCyan
+    Write-Host "3" "Curieux - aventureux" -ForegroundColor Magenta
+    Write-Host "4" "Grande force mentale - fort caractère `n" -ForegroundColor DarkYellow
+    Write-host  "Tapez '0' revenir au menu principal `n"
+
+$number = Read-Host "Quel est votre numéro ?"
+
+if ($number -lt 5)
+
+{
+    if ($number -eq 1)
+
+    {
+    Write-Host "`n Baguette en aubépine rigide avec un coeur de dragon ! `n" -ForegroundColor DarkRed
+    }
+
+    if ($number -eq 2)
+    {
+    Write-Host "`n  Baguette en noyer souple rigide avec crin de licorne ! `n" -Foregroundcolor DarkCyan
+    }
+
+    if ($number -eq 3)
+    {
+    Write-Host "`n Baguette en Sycomore souple avec une plume de phoenix ! `n" -foregroundcolor Magenta
+    }
+
+    if ($number -eq 4)
+    {
+    Write-Host "`n Baguette rigide en bois de cerisier avec un cheveu de vélane `n" -foregroundcolor DarkYellow
+    }
+
+    if ($number -eq 0)
+    {
+    break
+    }
+}
+
+else
+{
+Write-Host "`n Choix invalide `n" -ForegroundColor red
+}
+
+pause
+
+}
+}
+
+'3'
+{
+$continue = $true
+while ($continue)
+{
+    cls
+
+    Write-Host "Tu as choisi de découvrir ton patronus `n"
+    Write-Host "Choississez le numéro de ce qui vous représente le plus"
+    Write-Host "1" "Travailleur acharné" -foreground Green
+    Write-Host "2" "Un bon insctint" -ForegroundColor Gray
+    Write-Host "3" "Fidèle à vie à vos amis" -ForegroundColor Magenta
+    Write-Host "4" "Intrépide `n" -ForegroundColor Cyan
+    Write-host  "Tapez '0' revenir au menu principal `n"
+
+$number = Read-Host "Quel est votre numéro ?"
+
+if ($number -lt 5)
+
+{
+    if ($number -eq 1)
+
+    {
+    Write-Host "`n Bravo ton patronus est une vipère ! `n" -ForegroundColor Green
+    }
+
+    if ($number -eq 2)
+    {
+    Write-Host "`n  Bravo ton patronus est un loup ! `n" -Foregroundcolor Green
+    }
+
+    if ($number -eq 3)
+    {
+    Write-Host "`n Bravo ton patronus est une loutre ! `n" -foregroundcolor Magenta
+    }
+
+    if ($number -eq 4)
+    {
+    Write-Host "`n Bravo ton patronus est un chat `n" -foregroundcolor Cyan
+    }
+
+    if ($number -eq 0)
+    {
+    break
+    }
+}
+
+else
+{
+Write-Host "`n Choix invalide `n" -ForegroundColor red
+}
+
+pause
+
+}
+}
+
+'4' 
+{
+$continue = $false
+}
+
+}
+}
+
+Write-Host "Merci d'avoir joué !" -ForegroundColor DarkCyan

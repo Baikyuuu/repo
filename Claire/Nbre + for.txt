@@ -1,0 +1,49 @@
+cls
+
+
+$randomNumber = Get-Random -Minimum 1 -Maximum 101
+
+For ($cpt = 7; $cpt -gt 0; $cpt--)
+
+{
+Write-Host "Il vous reste $cpt possible `n" -ForegroundColor Cyan
+
+
+[int]$number = Read-Host "Choisissez un nombre entre 1 et 100"
+
+
+if ($number -ne $randomNumber)
+{
+        if (($number -gt 0) -and ($number -lt $randomNumber))
+        {
+        Write-Host "`n Trop bas `n" -ForegroundColor Yellow
+        }
+
+        if (($number -lt 101) -and ($number -gt $randomNumber))
+        {
+        Write-Host "`n Trop haut `n" -ForegroundColor Gray
+        }
+}
+
+ if ($number -eq $randomNumber)
+ {
+ Write-Host "`n Bravo vous avez trouvé ! `n" -ForegroundColor Green
+ Break
+ }       
+
+elseif ($number -gt 100)
+{
+Write-Host "`n Choix invalide `n" -ForegroundColor red
+}
+
+elseif ($number -le 0)
+{
+Write-Host "`n Choix invalide `n" -ForegroundColor red
+}
+
+}
+
+If ($cpt -eq 0)
+{
+Write-Host "Vous avez perdu" -ForegroundColor Black
+}
